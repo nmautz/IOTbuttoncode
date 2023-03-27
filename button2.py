@@ -10,7 +10,9 @@ while True:
   if button.is_pressed or button2.is_pressed:
     if button.is_pressed :
       print("Pressed button 1")
+      playsound('./test.mp3')
       time.sleep(0.5)
+      
     else:
       print("Pressed button 2")
       time.sleep(0.5)
