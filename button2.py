@@ -1,5 +1,6 @@
 from gpiozero import Button
 import time
+import json
 
 
 button = Button(2)
@@ -10,7 +11,9 @@ while True:
     if button.is_pressed :
       print("Pressed button 1")
       f = open("../../SmartAlarmClockWeb/alarm.json")
-      print(f.read())
+      file_string = f.read()
+      file_json = json.loads(file_string)
+      print(file_json.enabled)
       time.sleep(0.5)
       
     else:
