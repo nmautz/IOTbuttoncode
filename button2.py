@@ -19,6 +19,8 @@ while True:
       f.close()
       f = open("../../SmartAlarmClockWeb/alarm.json", 'w')
       f.write(file_string)
+      f.close()
+
       time.sleep(0.5)
       
     else:
@@ -32,4 +34,5 @@ while True:
       f.close()
       f = open("../../SmartAlarmClockWeb/alarm.json", 'w')
       f.write(file_string)
+      f.close()
       time.sleep(0.5)
