@@ -14,6 +14,11 @@ while True:
       file_string = f.read()
       file_json = json.loads(file_string)
       print(file_json["enabled"])
+      file_json["enabled"] = "true"
+      file_string = json.dumps(file_json)
+      f.close()
+      f = open("../../SmartAlarmClockWeb/alarm.json", 'w')
+      f.write(file_string)
       time.sleep(0.5)
       
     else:
