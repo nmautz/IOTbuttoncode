@@ -1,5 +1,4 @@
 from gpiozero import Button
-from playsound import playsound
 import time
 
 
@@ -10,7 +9,8 @@ while True:
   if button.is_pressed or button2.is_pressed:
     if button.is_pressed :
       print("Pressed button 1")
-      playsound('./test.mp3')
+      f = open("../../SmartAlarmClockWeb/alarm.json")
+      print(f.read())
       time.sleep(0.5)
       
     else:
