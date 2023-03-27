@@ -14,7 +14,7 @@ while True:
       file_string = f.read()
       file_json = json.loads(file_string)
       print(file_json["enabled"])
-      file_json["enabled"] = "true"
+      file_json["enabled"] = true
       file_string = json.dumps(file_json)
       f.close()
       f = open("../../SmartAlarmClockWeb/alarm.json", 'w')
@@ -29,7 +29,7 @@ while True:
       file_string = f.read()
       file_json = json.loads(file_string)
       print(file_json["enabled"])
-      file_json["enabled"] = "false"
+      file_json["enabled"] = false
       file_string = json.dumps(file_json)
       f.close()
       f = open("../../SmartAlarmClockWeb/alarm.json", 'w')
